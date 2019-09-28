@@ -33,14 +33,14 @@ Un arbre couvrant de poids minimal est un arbre couvrant (sous-ensemble qui est 
 
 https://fr.wikipedia.org/wiki/Arbre_couvrant_de_poids_minimal
 
-À tester ici : https://greattommy.github.io/p5js/algo_tri/arbre_couverture_minimum
+À tester ici : https://greattommy.github.io/p5js/arbre_couverture_minimum
 
 ## Space Invaders
 Le fameux, inspiré de la version de 1978.
 
-À tester ici : https://greattommy.github.io/p5js/algo_tri/space_invaders
+À tester ici : https://greattommy.github.io/p5js/space_invaders
 
 ## Systeme Solaire
-Animation avec les 4 premières planètes du système solaire. Les distances planète - soleil ainsi que les périodes de révolution sont à l'échelle linéaire, le diamètre des astres est quand à lui à l'échelle logarithmique.
+Animation avec les 4 premières planètes du système solaire. Les distances planète - soleil ainsi que les périodes de révolution sont à l'échelle linéaire, le diamètre des astres est quant à lui à l'échelle logarithmique.
 
-À tester ici : https://greattommy.github.io/p5js/algo_tri/systeme_solaire
+À tester ici : https://greattommy.github.io/p5js/systeme_solaire
