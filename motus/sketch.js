@@ -12,7 +12,7 @@ let lignes = [];
 let dico = [];
 
 function preload() {
-  monaco = loadFont('monaco.ttf');
+  monaco = loadFont('Monaco.ttf');
   //CHARGEMENT DU DICTIONNAIRE
   const requestURL = 'dico.json';
   const request = new XMLHttpRequest();
