@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+            rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="style.css">
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="p5.js"></script>
+        <script src="sketch.js"></script>
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+        <script type="text/javascript" src="scatterplot.js"></script>
+
+
+    </head>
+
+    <body>
+
+        <div class="container">
+            <nav class="navbar bg-dark">
+                <div class="container">
+                    <span class="navbar-brand mb-0 h1 text-light">Compare
+                        yourself to Neymar !</span>
+                </div>
+            </nav>
+            <div id="body-content" class="container bg-light">
+                <div id="game-container" class="contrainer">
+                    <div id="game" class="d-inline-block bg-warning p-3 mt-3">
+                        <div id="game-screen" class="mb-3"></div>
+                        <div id="game-footer" class="">
+                            <img id="left_arrow" src="left.png"
+                                onclick="processClick('left')">
+                            <img id="space" src="space.png"
+                                onclick="processClick('space')">
+                            <img id="right_arrow" src="right.png"
+                                onclick="processClick('right')">
+                        </div>
+                    </div>
+                </div>
+                <div id="graph-container" class="contrainer p-3">
+                    <div id="graph" class="d-inline-block bg-dark p-3 mt-3">
+                        <div id="myPlot"
+                            style="width:100%;max-width:600px;max-height:200px;">
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </body>
+
+</html>

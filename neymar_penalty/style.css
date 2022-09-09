@@ -1,0 +1,51 @@
+html,
+body {
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+}
+
+#body-content {
+    margin: 0;
+}
+
+#game-container {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+
+#game-footer {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+#space:active {
+    filter: brightness(75%) !important;
+}
+
+img {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+canvas {
+    border-radius: 12px;
+    /* box-shadow: 0px 0px 5px 0px #000000; */
+}
+
+#game {
+    border-radius: 12px;
+}
+
+#graph-container {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+#graph {
+    border-radius: 12px;
+}
