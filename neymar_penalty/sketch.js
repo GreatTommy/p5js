@@ -7,7 +7,7 @@ let arrowRight;
 let neymarVideo;
 let finalFrame;
 let goalkeeperFrame;
-let time;
+let rTime;
 let neymarFrame;
 let lastMillis = 0;
 let col;
@@ -70,7 +70,7 @@ function draw() {
         if (!choiceDone) {
             text("> Reaction time : " + round(millis() - lastMillis), 10, 437);
         } else {
-            text("> Reaction time : " + time, 10, 437);
+            text("> Reaction time : " + rTime, 10, 437);
             if (!plotUpdated) {
                 displayPlot();
                 plotUpdated = true;
@@ -87,7 +87,7 @@ function toggleVid() {
     b = new ball();
     choiceDone = false;
     lastMillis = 0;
-    time = 0;
+    rTime = 0;
     videoFinished = false;
     plotUpdated = false;
     left_arrow.style("filter", "brightness(100%)");
@@ -98,11 +98,9 @@ function toggleVid() {
 }
 
 function keyPressed() {
-    // print(neymarVideo.time());
-
-    if (keyCode === LEFT_ARROW) {
+    if (keyCode === LEFT_ARROW || keyCode === 65 || keyCode === 81) {
         processClick("left");
-    } else if (keyCode === RIGHT_ARROW) {
+    } else if (keyCode === RIGHT_ARROW || keyCode === 80) {
         processClick("right");
     } else if (keyCode === 32) {
         processClick("space");
@@ -112,11 +110,7 @@ function keyPressed() {
 }
 
 function keyReleased() {
-    if (keyCode === LEFT_ARROW) {
-        // left_arrow.style("filter", "brightness(100%)");
-    } else if (keyCode === RIGHT_ARROW) {
-        // right_arrow.style("filter", "brightness(100%)");
-    } else if (keyCode === 32) {
+    if (keyCode === 32) {
         space.style("filter", "brightness(100%)");
     }
 
@@ -124,19 +118,15 @@ function keyReleased() {
 
 function appendTime() {
     if (b.choice === gk.choice) {
-        rightfoots.push(time);
+        rightfoots.push(rTime);
     } else {
-        wrongfoots.push(time);
+        wrongfoots.push(rTime);
     }
 }
 
 function printReaction() {
     if (videoFinished) {
-        time = round(millis() - lastMillis);
-        console.log(time);
-
-    } else {
-        console.log(time);
+        rTime = round(millis() - lastMillis);
     }
     appendTime();
 }
