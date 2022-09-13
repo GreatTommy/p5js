@@ -44,19 +44,19 @@ function setup() {
     space = select("#space");
     left_arrow = select("#left_arrow");
     right_arrow = select("#right_arrow");
+    neymarVideo.onended(function () {
+        videoFinished = true;
+        lastMillis = millis();
+    });
     displayPlot();
 
 }
 
+
+
 function draw() {
     background(255);
     image(neymarVideo.size(600, 450), 0, 0);
-    if (!videoFinished) {
-        if (neymarVideo.time() >= 3.584) {
-            videoFinished = true;
-            lastMillis = millis();
-        }
-    }
     if (videoFinished) {
         image(finalFrame, 0, 0, 600, 450);
         gk.deplacer();
@@ -238,7 +238,7 @@ function displayPlot() {
         mode: "markers",
         type: "scatter",
         name: "Wrong-foot",
-        marker: { size: 12 }
+        marker: { size: 12, color: "#ff7f0e" }
     };
 
     var trace2 = {
@@ -247,7 +247,7 @@ function displayPlot() {
         mode: "markers",
         type: "scatter",
         name: "Right-foot",
-        marker: { size: 12 }
+        marker: { size: 12, color: "#1f77b4" }
     };
 
     var data = [trace1, trace2];
@@ -286,3 +286,4 @@ window.onkeydown = function (e) {
         return false;
     }
 };
+
