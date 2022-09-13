@@ -12,7 +12,7 @@
 
         <script
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="p5.js"></script>
+        <script src="p5.min.js"></script>
         <script src="sketch.js"></script>
         <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 
@@ -23,37 +23,78 @@
 
     <body>
 
-        <div class="container">
-            <nav class="navbar bg-dark">
-                <div class="container">
-                    <span class="navbar-brand mb-0 h1 text-light">Compare
-                        yourself to Neymar !</span>
-                </div>
-            </nav>
-            <div id="body-content" class="container bg-light">
-                <div id="game-container" class="contrainer">
-                    <div id="game" class="d-inline-block bg-warning p-3 mt-3">
-                        <div id="game-screen" class="mb-3"></div>
-                        <div id="game-footer" class="">
-                            <img id="left_arrow" src="left.png"
-                                onclick="processClick('left')">
-                            <img id="space" src="space.png"
-                                onclick="processClick('space')">
-                            <img id="right_arrow" src="right.png"
-                                onclick="processClick('right')">
-                        </div>
-                    </div>
-                </div>
-                <div id="graph-container" class="contrainer p-3">
-                    <div id="graph" class="d-inline-block bg-dark p-3 mt-3">
-                        <div id="myPlot"
-                            style="width:100%;max-width:600px;max-height:200px;">
-                        </div>
-                    </div>
-
+        <div id="body-content" class="container-fluid bg-light">
+            <div class="content-container contrainer pt-3">
+                <div class="d-inline-block text">
+                    <p>
+                        The game below is a penalty simulator where you can
+                        measure your reaction time between the moment when the
+                        goalkeeper begins to dive to one side and the moment
+                        when you choose a side to shoot the ball. The times are
+                        reported just below the game, on a chart which is
+                        updated at each iteration.<br><br>
+                        The controls to play the game are simple. You can either
+                        click on the left, space or right buttons if you play on
+                        a smartphone (not recommended) or you can use your
+                        keyboard :<br>
+                        > A, Q or LEFT ARROW to shoot on the left<br>
+                        > P or RIGHT ARROW to shoot on the right<br>
+                        > SPACE to move on to the next shot<br>
+                    </p>
                 </div>
 
             </div>
+            <div class="content-container contrainer">
+                <div id="game" class="d-inline-block bg-warning p-3">
+                    <div id="game-screen" class="mb-3"></div>
+                    <div id="game-footer" class="">
+                        <img id="left_arrow" src="left.png"
+                            onclick="processClick('left')">
+                        <img id="space" src="space.png"
+                            onclick="processClick('space')">
+                        <img id="right_arrow" src="right.png"
+                            onclick="processClick('right')">
+                    </div>
+                </div>
+            </div>
+            <div class="content-container contrainer pt-3">
+                <div class="d-inline-block text">
+                    <p>
+                        Below is the graph with a new point for each shot you
+                        took. If you have a sufficient amount of shots, you
+                        should be able to see a separation between an area where
+                        you have half "wrong-foot" half "right-foot" and an area
+                        where almost all your shots are "wrong-foot". You can
+                        then estimate the minimum time you need between the
+                        moment the goalkeeper gives information and the moment
+                        you take the shot.
+                    </p>
+                </div>
+            </div>
+            <div class="content-container contrainer">
+                <div id="graph" class="d-inline-block">
+                    <div id="myPlot"></div>
+                </div>
+            </div>
+            <div class="content-container contrainer pt-3">
+                <div class="d-inline-block text">
+                    <p>
+                        Below is the data of Neymar's penalties, so you can
+                        compare your results with his :
+                    </p>
+                    <img src="reaction-time.png"
+                        style="width: 100%; max-width: 600px; border: 1px solid black">
+                    <p>
+                        <br>
+                        <a
+                            href="https://github.com/GreatTommy/p5js/tree/gh-pages/neymar_penalty">Source
+                            code</a>
+                        - GreatTommy
+                    </p>
+                </div>
+            </div>
+
+        </div>
 
         </div>
 

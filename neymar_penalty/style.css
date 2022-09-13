@@ -9,7 +9,7 @@ body {
     margin: 0;
 }
 
-#game-container {
+.content-container {
     margin: 0;
     display: flex;
     justify-content: center;
@@ -40,12 +40,26 @@ canvas {
     border-radius: 12px;
 }
 
-#graph-container {
-    margin: 0;
-    display: flex;
-    justify-content: center;
+#graph {
+    border: 1px solid black;
 }
 
-#graph {
-    border-radius: 12px;
+#myPlot {
+    width: 100%;
+    max-width: 600px;
+    max-height: 200px;
+}
+
+.text {
+    width: 600px;
+}
+
+p {
+    text-align: justify;
+    font-family: 'Courier New';
+}
+
+a {
+    color: inherit;
+    font-family: 'Courier New';
 }
